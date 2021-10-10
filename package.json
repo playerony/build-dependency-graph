@@ -1,0 +1,25 @@
+{
+  "name": "build-dependency-graph",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs",
+    "format": "yarn prettier --write",
+    "prettier": "prettier \"**/*.mjs\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/playerony/build-dependency-graph.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/playerony/build-dependency-graph/issues"
+  },
+  "homepage": "https://github.com/playerony/build-dependency-graph#readme",
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  }
+}
