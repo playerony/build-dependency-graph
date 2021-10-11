@@ -45,6 +45,6 @@ function createModule(filePath) {
   return { ast, content, filePath, dependencies };
 }
 
-const buildDependencyGraph = (entryFile) => createModule(entryFile);
+const buildDependencyGraph = createModule;
 
 console.log(buildDependencyGraph("./to-bundle/index.js"));
