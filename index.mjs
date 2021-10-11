@@ -36,6 +36,8 @@ function findModuleDependencies(ast, filePath) {
 }
 
 function createModule(filePath) {
+  validateFilePath(filePath);
+
   const content = readFile(filePath);
   const ast = babel.parseSync(content);
   const dependencies = findModuleDependencies(ast, filePath);
@@ -43,10 +45,6 @@ function createModule(filePath) {
   return { ast, content, filePath, dependencies };
 }
 
-function buildDependencyGraph(entryFile) {
-  validateFilePath(entryFile);
-
-  return createModule(entryFile);
-}
+const buildDependencyGraph = (entryFile) => createModule(entryFile);
 
 console.log(buildDependencyGraph("./to-bundle/index.js"));

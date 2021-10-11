@@ -1,4 +1,4 @@
 import { add } from './add.js';
 import { subtract } from './subtract.js';
 
-console.log(add(1, 2));
+console.log(subtract(add(1, 2), 5));
